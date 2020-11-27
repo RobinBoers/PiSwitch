@@ -5,8 +5,8 @@ from threading import Thread
 from os import system as fileopen
 from time import sleep
 
-width=0
-height=0
+width=800
+height=480
 
 def scale_bitmap(bitmap, widther, heighter):
     image = wx.ImageFromBitmap(bitmap)
