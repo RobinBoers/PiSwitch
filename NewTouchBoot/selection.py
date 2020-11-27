@@ -139,16 +139,16 @@ class MyForm(wx.Frame):
  
 # Run the program
 if __name__ == "__main__":
-    cmd = ['xrandr']
-    cmd2 = ['grep', '*']
-    p = subprocess.Popen(cmd, stdout=subprocess.PIPE)
-    p2 = subprocess.Popen(cmd2, stdin=p.stdout, stdout=subprocess.PIPE)
-    p.stdout.close()
-    resolution_string, junk = p2.communicate()
-    resolution = resolution_string.split()[0]
-    strwidth, strheight = resolution.split('x')
-    width=int(strwidth)
-    height=int(strheight)
+    # cmd = ['xrandr']
+    # cmd2 = ['grep', '*']
+    # p = subprocess.Popen(cmd, stdout=subprocess.PIPE)
+    # p2 = subprocess.Popen(cmd2, stdin=p.stdout, stdout=subprocess.PIPE)
+    # p.stdout.close()
+    # resolution_string, junk = p2.communicate()
+    # resolution = resolution_string.split()[0]
+    # strwidth, strheight = resolution.split('x')
+    width=800
+    height=480
     ex = wx.App()
     MyForm(None)
     ex.MainLoop() 
