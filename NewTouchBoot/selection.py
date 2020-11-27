@@ -49,7 +49,7 @@ class MyForm(wx.Frame):
         self.InitUI()
 
     def InitUI(self):  
-        self.panel_two = PanelTwo(self)
+        # self.panel_two = PanelTwo(self)
         self.panel_one = PanelOne(self)
         self.panel_three = PanelThree(self)
         self.SetSize((width, height))
@@ -58,18 +58,6 @@ class MyForm(wx.Frame):
         self.panel_one.SetSize((width, height))
         self.panel_two.SetSize((width, height))
         self.panel_three.SetSize((width, height))
-        self.panel_one.Hide()
-        self.panel_three.Hide()
-        self.panel_two.SetBackgroundColour(wx.WHITE)
-        
-        self.panel_two.lbl = wx.StaticText(self.panel_two, wx.ID_ANY, pos=(width/2 - 225, 10), style = wx.ALIGN_CENTER)
-        txt1 = "To Connect Your Joy-Con Controllers" 
-        txt2 = "Press the Plus and Minus Buttons" 
-        txt3 = "A Check Box Will Appear to Indicate Success." 
-        txt = txt1+"\n"+txt2+"\n"+txt3
-        font = wx.Font(18, wx.ROMAN, wx.ITALIC, wx.NORMAL)
-        self.panel_two.lbl.SetFont(font)
-        self.panel_two.lbl.SetLabel(txt)
         
         rpbmp = wx.Bitmap("/opt/retropie/configs/all/NewTouchBoot/retro.jpg", wx.BITMAP_TYPE_ANY)
         rpbmp = scale_bitmap(rpbmp, width/2, height/2)
@@ -89,12 +77,6 @@ class MyForm(wx.Frame):
         self.panel_one.kb.Bind(wx.EVT_BUTTON, self.Pressedkb)
         self.panel_one.rb.Bind(wx.EVT_BUTTON, self.Pressedrb)
         self.panel_one.tb.Bind(wx.EVT_BUTTON, self.Pressedtb)
-        
-        self.panel_two.timer = wx.Timer(self.panel_two, wx.ID_ANY)
-        # update clock digits every second (1000ms)
-        self.panel_two.Bind(wx.EVT_TIMER, self.OnTimer)
-        self.panel_two.timer.Start(100)
-        #self.Centre()   
 
         self.SetSize((width, height))
         self.SetTitle('Starting Your Entertainment Experience')
