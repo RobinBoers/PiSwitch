@@ -18,8 +18,6 @@ class PanelOne(wx.Panel):
     """"""
     global width
     global height
-    global jconr
-    global jconl
     def __init__(self, parent):
         """Constructor"""
         wx.Panel.__init__(self, parent=parent)
@@ -28,8 +26,6 @@ class PanelTwo(wx.Panel):
     """"""
     global width
     global height
-    global jconr
-    global jconl
     def __init__(self, parent):
         """Constructor"""
         wx.Panel.__init__(self, parent=parent)
@@ -43,8 +39,7 @@ class PanelThree(wx.Panel):
         wx.Panel.__init__(self, parent=parent)
 
 class MyForm(wx.Frame):
-    global jconl
-    global jconr
+
     global width
     global height
 
@@ -54,8 +49,6 @@ class MyForm(wx.Frame):
         self.InitUI()
 
     def InitUI(self):  
-        global jconr
-        global jconl
         self.panel_two = PanelTwo(self)
         self.panel_one = PanelOne(self)
         self.panel_three = PanelThree(self)
@@ -159,4 +152,3 @@ if __name__ == "__main__":
     ex = wx.App()
     MyForm(None)
     ex.MainLoop() 
-
