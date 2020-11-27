@@ -5,7 +5,7 @@ sudo apt-get install -y python-wxgtk3.0
 sudo apt-get install -y matchbox-keyboard
 
 echo "Cloning repo..."
-git clone  https://github.com/RobinBoers/PiSwitch /home/RobinBoers/PiSwitch
+git clone  https://github.com/RobinBoers/PiSwitch /home/pi/PiSwitch
 
 echo "Backing up old files to /home/pi/oldconfig"
 sudo cp /boot/config.txt /boot/config_bkp.txt
@@ -18,7 +18,6 @@ sudo cp /home/pi/PiSwitch/config.txt /boot/config.txt
 sudo cp /home/pi/PiSwitch/cmdline.txt /boot/cmdline.txt
 
 echo "Setting premissions"
-sudo chmod 777 /etc/splashscreen.list
 sudo chmod 777 /boot/cmdline.txt
 sudo chmod a+x /boot/cmdline.txt
 sudo chmod 777 /opt/retropie/configs/all/NewTouchBoot/checknum
