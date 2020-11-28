@@ -1,3 +1,3 @@
 date >> /opt/retropie/configs/all/NewTouchBoot/logfile.txt
 
-/opt/retropie/configs/all/NewTouchBoot/starter.sh >> /opt/retropie/configs/all/NewTouchBoot/logfile.txt #auto
+startx /opt/retropie/configs/all/NewTouchBoot/starter.sh >> /opt/retropie/configs/all/NewTouchBoot/logfile.txt #auto

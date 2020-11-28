@@ -56,7 +56,7 @@ class MyForm(wx.Frame):
         self.SetTitle('Starting Your Entertainment Experience')
         self.Centre()
         self.panel_one.SetSize((width, height))
-        self.panel_two.SetSize((width, height))
+        # self.panel_two.SetSize((width, height))
         self.panel_three.SetSize((width, height))
         
         rpbmp = wx.Bitmap("/opt/retropie/configs/all/NewTouchBoot/retro.jpg", wx.BITMAP_TYPE_ANY)

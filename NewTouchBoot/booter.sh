@@ -1,0 +1,1 @@
+python /opt/retropie/configs/all/NewTouchBoot/selection.py
