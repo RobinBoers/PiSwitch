@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python /opt/retropie/configs/all/NewTouchBoot/selection.py
+startx python /opt/retropie/configs/all/NewTouchBoot/booter.sh
 
 source /opt/retropie/configs/all/NewTouchBoot/checknum
 
